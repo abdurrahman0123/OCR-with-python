@@ -2,9 +2,6 @@ import cv2
 import pytesseract #if any occur pytesseract.pytesseract.tesseract_cmd=r'C:Program FilesTesseract-OCRtesseract.exe' 
 import streamlit as st
 from pytesseract import Output
-def get_grayscale(image):
-   st.title("Upload")
-    
     
 with st.container():
     st.header('OCR with python')
@@ -12,7 +9,6 @@ with st.container():
     img= st.file_uploader("Upload Your Dataset")
     
     img = cv2.imread("image.jpg")
-    img = get_grayscale(img)
     img = cv2.resize(img, (400, 450))
 
 
